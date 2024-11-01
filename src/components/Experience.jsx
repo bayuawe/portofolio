@@ -14,44 +14,44 @@ import { useRef } from "react";
 // Definisikan posisi tetap di luar komponen
 const socialLinks = [
   {
-    text: "Github",
-    position: [-1.5, 1.2, -1],
-    url: "https://github.com/bayuawe",
-    color: "#333333",
+    text: "Email",
+    position: [0, 2.5, -2],
+    url: "mailto:bayuaryandi21@gmail.com",
+    color: "#EA4335",
     scale: 0.3,
-    modelPath: "/models/github.glb"
-  },
-  {
-    text: "LinkedIn",
-    position: [1.5, 1.5, -1],
-    url: "https://linkedin.com/in/bayu-aryandi-wijaya-647b01215",
-    color: "#0077B5",
-    scale: 0.3,
-    modelPath: "/models/linkedin.glb"
-  },
-  {
-    text: "Resume",
-    position: [-2, 2, -1.5],
-    url: "/doc/Profile.pdf",
-    color: "#4CAF50",
-    scale: 0.3,
-    modelPath: "/models/resume.glb"
+    modelPath: "/models/gmail.glb"
   },
   {
     text: "Instagram",
-    position: [2, 1.8, -1.5],
+    position: [1, 2, -1.5],
     url: "https://instagram.com/wawewuawe",
     color: "#E4405F",
     scale: 0.3,
     modelPath: "/models/instagram.glb"
   },
   {
-    text: "Email",
-    position: [0, 2.2, -2],
-    url: "mailto:bayuaryandi21@gmail.com",
-    color: "#EA4335",
+    text: "Resume",
+    position: [-1,2, -1.5],
+    url: "/doc/Profile.pdf",
+    color: "#4CAF50",
+    scale: 0.13,
+    modelPath: "/models/resume.glb"
+  },
+  {
+    text: "LinkedIn",
+    position: [1.7, 1.5, -1],
+    url: "https://linkedin.com/in/bayu-aryandi-wijaya-647b01215",
+    color: "#0077B5",
     scale: 0.3,
-    modelPath: "/models/gmail.glb"
+    modelPath: "/models/linkedin.glb"
+  },
+  {
+    text: "Github",
+    position: [-1.7, 1.5, -1],
+    url: "https://github.com/bayuawe",
+    color: "#333333",
+    scale: 0.3,
+    modelPath: "/models/github.glb"
   }
 ];
 
