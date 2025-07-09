@@ -12,10 +12,11 @@ import Link from "next/link";
 import { BackToTop } from "@/components/back-to-top";
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#experiences", label: "Experiences" },
-  { href: "#education", label: "Education" },
-  { href: "#projects", label: "Projects" },
+  { href: "/", label: "// home" },
+  { href: "#expertise", label: "// expertise" },
+  { href: "#projects", label: "// work" },
+  { href: "#education", label: "// experience" },
+  { href: "#contact", label: "// contact" },
 ];
 
 const projects = [
@@ -43,10 +44,11 @@ export default function Portfolio() {
       <ScrollIndicator />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b z-40 transition-all duration-300">
+      <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md z-40 transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="#" className="font-bold text-lg sm:text-xl hover:text-primary transition-colors">
+            <Link href="/" className="font-bold text-2xl sm:text-xl hover:text-primary transition-colors font-mono">
+              <code>Bayuawe._</code>
             </Link>
 
             {/* Desktop Navigation */}
@@ -57,7 +59,7 @@ export default function Portfolio() {
                   href={item.href}
                   className="text-sm font-medium hover:text-primary transition-colors relative group"
                 >
-                  {item.label}
+                  <code>{item.label}</code>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
                 </Link>
               ))}
@@ -79,11 +81,10 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8 sm:mb-12">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-                Bayu Aryandi Wijaya
+                BAYU ARYANDI WIJAYA
               </h1>
               <div className="space-y-2 sm:space-y-3">
-                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">@bayuawe</p>
-                <p className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold">Frontend Developer</p>
+                <p className="text-lg sm:text-xl md:text-2xl text-primary font-semibold">SOFTWARE ENGINEER, FRONT END & WEB DEVELOPER.</p>
               </div>
             </div>
 
@@ -119,13 +120,13 @@ export default function Portfolio() {
         </div>
       </SectionWrapper>
 
-      {/* About Section */}
-      <SectionWrapper id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      {/* Expertise Section */}
+      <SectionWrapper id="expertise" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center mb-8 sm:mb-12">
               <span className="text-2xl sm:text-3xl font-bold mr-4 text-primary">01</span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">ABOUT</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">My Expertise</h2>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">

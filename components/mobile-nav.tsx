@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import React from 'react';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const navItems = [
   { href: "#about", label: "About" },
@@ -11,19 +12,19 @@ const navItems = [
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
-]
+];
 
 export function MobileNav() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const handleNavClick = (href: string) => {
-    setOpen(false)
+    setOpen(false);
     // Smooth scroll to section
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -47,5 +48,5 @@ export function MobileNav() {
         </nav>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
