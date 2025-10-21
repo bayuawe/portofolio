@@ -1,6 +1,4 @@
 import React from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileNav } from "@/components/mobile-nav";
 import { ScrollIndicator } from "@/components/scroll-indicator";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { ProjectCard } from "@/components/project-card";
@@ -10,31 +8,18 @@ import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Calendar, MapPin, Download } from "lucide-react";
 import Link from "next/link";
 import { BackToTop } from "@/components/back-to-top";
+import Navbar from "@/components/navbar";
 
-const navItems = [
-  { href: "/", label: "// home" },
-  { href: "#expertise", label: "// expertise" },
-  { href: "#projects", label: "// work" },
-  { href: "#education", label: "// experience" },
-  { href: "#contact", label: "// contact" },
-];
+
 
 const projects = [
   {
     title: "Sari Pasundan Company Profile",
     description:
       "Mengembangkan website profil perusahaan menggunakan Laravel dan manajemen database MySQL dengan fitur admin panel dan content management system.",
-    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    repoUrl: "https://github.com/bayuawe/compro-saripasundan",
-    liveUrl: "https://saripasundan.bayuawe.my.id",
-  },
-  {
-    title: "Tugas Kita",
-    description:
-      "Tugas kita adalah aplikasi pengelola tugas berbasis web yang dirancang menggunakan Vue 3, Vite, dan Tailwind CSS. Aplikasi ini bertujuan membantu pengguna mencatat dan mengelola tugas secara efisien melalui antarmuka yang modern dan responsif.",
-    technologies: ["Vue 3", "Vite", "Tailwind CSS"],
-    repoUrl: "https://github.com/bayuawe/tugaskita",
-    liveUrl: "https://tugaskita.vercel.app/",
+    technologies: ["PHP", "MySQL", "Laravel", "Tailwind CSS"],
+    repoUrl: "https://github.com/bayuawe/saripasundan-company-profile",
+    liveUrl: "https://sari-pasundan-pekanbaru.laravel.cloud/",
   },
 ];
 
@@ -43,37 +28,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background">
       <ScrollIndicator />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md z-40 transition-all duration-300">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="font-bold text-2xl sm:text-xl hover:text-primary transition-colors font-mono">
-              <code>Bayuawe._</code>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium hover:text-primary transition-colors relative group"
-                >
-                  <code>{item.label}</code>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                </Link>
-              ))}
-              <ThemeToggle />
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="md:hidden flex items-center space-x-2">
-              <ThemeToggle />
-              <MobileNav />
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <SectionWrapper className="pt-24 pb-16 sm:pt-32 sm:pb-20 px-4 sm:px-6 lg:px-8">
@@ -108,14 +63,6 @@ export default function Portfolio() {
                 </Link>
               </Button>
             </div>
-
-            <div className="space-y-4">
-              <div className="text-4xl sm:text-5xl md:text-6xl">👋</div>
-              <p className="text-lg sm:text-xl font-medium">Hey there!</p>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Passionate about creating beautiful, functional web experiences with modern technologies
-              </p>
-            </div>
           </div>
         </div>
       </SectionWrapper>
@@ -134,14 +81,10 @@ export default function Portfolio() {
                 <Card className="h-full">
                   <CardContent className="p-6 sm:p-8">
                     <p className="text-base sm:text-lg leading-relaxed mb-6">
-                      Junior Frontend Developer dengan latar belakang 5+ tahun sebagai Desainer Grafis. Memiliki
-                      kemampuan kuat dalam membangun antarmuka pengguna responsif dan menarik menggunakan HTML, CSS,
-                      JavaScript, serta pengalaman dengan Laravel dan Figma.
-                    </p>
-                    <p className="text-base sm:text-lg leading-relaxed">
-                      Lulusan S1 Teknik Informatika. Terbiasa bekerja secara kolaboratif dan menyelesaikan proyek tepat
-                      waktu dengan kualitas tinggi. Siap memberikan kontribusi pada tim pengembangan web yang
-                      mengutamakan user experience dan desain modern.
+                      Junior IT Developer dengan latar belakang desain grafis dan pengalaman lebih dari 5 tahun dalam
+                      pengembangan visual. Lulusan Universitas Muhammadiyah Riau dengan keahlian di pengembangan web
+                      dan pemahaman dasar server dan jaringan. Menguasai HTML, CSS, JavaScript, Laravel dan MySQL.
+                      Cepat belajar, detail, dan mampu bekerja dalam tim.
                     </p>
                   </CardContent>
                 </Card>
@@ -207,11 +150,13 @@ export default function Portfolio() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 text-base leading-relaxed">
-                    Mengembangkan website profil perusahaan menggunakan Laravel dan manajemen database MySQL.
-                    Bertanggung jawab dalam pembuatan fitur admin panel, content management system, dan optimasi
-                    performa website.
-                  </p>
+                  <ul className="mb-4 list-disc list-inside text-base leading-relaxed">
+                    <li>Membangun website company profile menggunakan Laravel.</li>
+                    <li>Mengimplementasikan HTML, CSS, dan JavaScript untuk UI/UX responsif.</li>
+                    <li>Mengelola database produk dengan MySQL.</li>
+                    <li>Menggunakan Git untuk version control.</li>
+                    <li>Memastikan performa server web stabil selama operasional.</li>
+                  </ul>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">PHP</Badge>
                     <Badge variant="secondary">Laravel</Badge>
@@ -237,10 +182,12 @@ export default function Portfolio() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 text-base leading-relaxed">
-                    Mendesain konten visual untuk Instagram & Facebook menggunakan Adobe Photoshop, Illustrator, dan
-                    CorelDRAW untuk kampanye visual. Mengembangkan brand identity dan material marketing yang konsisten.
-                  </p>
+                  <ul className="mb-4 list-disc list-inside text-base leading-relaxed">
+                    <li>Membuat konten visual untuk Instagram dan Facebook.</li>
+                    <li>Mengembangkan desain sesuai kebutuhan bisnis.</li>
+                    <li>Menggunakan Adobe Creative Suite dan CorelDRAW untuk materi digital dan cetak.</li>
+                    <li>Bekerja sama dengan tim marketing dalam menjaga konsistensi branding.</li>
+                  </ul>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">Photoshop</Badge>
                     <Badge variant="secondary">Illustrator</Badge>

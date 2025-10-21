@@ -1,15 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  technologies: string[]
-  repoUrl?: string
-  liveUrl?: string
+  title: string;
+  description: string;
+  technologies: string[];
+  repoUrl?: string;
+  liveUrl?: string;
 }
 
 export function ProjectCard({ title, description, technologies, repoUrl, liveUrl }: ProjectCardProps) {
@@ -49,5 +50,5 @@ export function ProjectCard({ title, description, technologies, repoUrl, liveUrl
         <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
       </CardContent>
     </Card>
-  )
+  );
 }
